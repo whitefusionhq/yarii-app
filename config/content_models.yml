@@ -1,0 +1,153 @@
+staging:
+  page:
+    class_name: Page
+    primary_fields:
+      -
+        field_type: text
+        field_name: title
+        label: Title
+        placeholder: Groovy New Page
+        class_names: foobar
+    additional_fields:
+      -
+        field_type: text
+        field_name: layout
+        label: Layout Template
+      -
+        field_type: text
+        field_name: permalink
+        label: Custom Permalink
+    content_fields:
+      -
+        field_type: markdown
+        field_name: content
+        placeholder: Page content goes here… 
+production:
+  article:
+    class_name: Article
+    primary_fields:
+      -
+        field_type: text
+        field_name: title
+        label: Title
+        placeholder: The Day I Visited the Ocean
+        class_names: foobar
+      -
+        field_type: textarea
+        field_name: subtitle
+        label: Subtitle
+        placeholder: "With every step I took, I got even closer to my ultimate destination. Eventually when I arrived, I realized I'd been here once before."
+    additional_fields:
+      -
+        field_type: text
+        field_name: layout
+        label: Layout Template
+    content_fields:
+      -
+        field_type: markdown
+        field_name: content
+        placeholder: Write an awesome post!
+  picture:
+    class_name: Picture
+    primary_fields: []
+    additional_fields:
+      -
+        field_type: text
+        field_name: layout
+        label: Layout Template
+    content_fields:
+      -
+        field_type: markdown
+        field_name: content
+        placeholder: Describe your image…
+  slideshow:
+    class_name: Slideshow
+    title: Homepage Slide
+    datafile: slideshow.yml
+    primary_fields:
+      -
+        field_type: text
+        field_name: caption
+        label: Caption
+      -
+        field_type: text
+        field_name: cloudinary_id
+        label: Cloudinary ID
+    additional_fields: []
+    content_fields: []
+  category_label:
+    class_name: CategoryLabel
+    datafile: category_labels.yml
+    primary_fields:
+      -
+        field_type: text
+        field_name: title
+        label: Title
+      -
+        field_type: text
+        field_name: url
+        label: URL 
+    additional_fields: []
+    content_fields: []
+  link:
+    class_name: Link
+    primary_fields:
+      -
+        field_type: text
+        field_name: link_title
+        label: Link Title
+        placeholder: Some Nifty Article
+      -
+        field_type: text
+        field_name: link_url
+        label: Link URL
+    additional_fields:
+      -
+        field_type: text
+        field_name: layout
+        label: Layout Template
+    content_fields:
+      -
+        field_type: markdown
+        field_name: link_excerpt
+        placeholder: Quote from the source
+      -
+        field_type: markdown
+        field_name: content
+        placeholder: Write an awesome post!
+  thought:
+    class_name: Thought
+    primary_fields: []
+    additional_fields:
+      -
+        field_type: text
+        field_name: layout
+        label: Layout Template
+    content_fields:
+      -
+        field_type: markdown
+        field_name: content
+        placeholder: Whatcha thinking about?
+  page:
+    class_name: Page
+    primary_fields:
+      -
+        field_type: text
+        field_name: title
+        label: Title
+        placeholder: Groovy New Page
+        class_names: foobar
+    additional_fields:
+      -
+        field_type: text
+        field_name: layout
+        label: Layout Template
+      -
+        field_type: text
+        field_name: permalink
+        label: Custom Permalink
+    content_fields:
+      -
+        field_type: markdown
+        field_name: content
+        placeholder: Page content goes here… 

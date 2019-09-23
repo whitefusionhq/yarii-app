@@ -1,0 +1,5 @@
+app: PORT=3007 puma
+webpack: ./bin/webpack -w
+
+# the dev server should only be used for localhost testing...not for remote tunnelling
+#webpacker: ./bin/webpack-dev-server
