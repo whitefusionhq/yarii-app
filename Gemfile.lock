@@ -27,6 +27,7 @@ PATH
   remote: /home/jared/apps/yarii-editor
   specs:
     yarii-editor (0.1.0)
+      git (~> 1.5)
       rails (~> 6.0.0)
       webpacker (~> 4.0)
 
