@@ -16,6 +16,11 @@ module YariiExampleApp
       Rack::Static,
       urls: ["/yarii-editor-packs"], root: "#{path}/public"
     )
+    path = Gem.loaded_specs['yarii-cloudinary'].full_gem_path
+    config.middleware.use(
+      Rack::Static,
+      urls: ["/yarii-cloudinary-packs"], root: "#{path}/public"
+    )
 
     config.content_models = config_for(:content_models)
 

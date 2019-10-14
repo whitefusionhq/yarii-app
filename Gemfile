@@ -32,6 +32,7 @@ gem 'figaro'
 gem 'key_path', github: 'mattgrannary/keypath-ruby', branch: 'enumerable/fix-set-keypath'
 gem 'yarii-content-model', path: '/home/jared/apps/yarii-content-model'
 gem 'yarii-editor', path: '/home/jared/apps/yarii-editor'
+gem 'yarii-cloudinary', path: '/home/jared/apps/yarii-cloudinary'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,0 +1,23 @@
+<% props = local_assigns %>
+<header class="card-header">
+  <p class="card-header-title">
+    <%= props[:model].title %>
+  </p>
+</header>
+<% if props[:model].cloudinary_id.present? %>
+  <div class="card-image">
+    <figure class="image is-2by1">
+      <%= cl_image_tag props[:model].cloudinary_id, :width => 1024, :crop => :limit, :format => :jpg, :quality => 65, :cloud_name => ENV['yarii_cloudinary_cloud_name'], style: 'object-fit:cover' %>
+    </figure>
+  </div>
+<% end %>
+<div class="card-content">
+  <div class="content">
+    <p><%= props[:model].subtitle || props[:model].content.truncate(250) %></p>
+    <p class="has-text-right"><time datetime="<%= props[:model].posted_datetime.strftime('%Y-%-m-%-d') %>"><%= props[:model].posted_datetime.strftime('%B %-d, %Y') %></time> <small class="has-text-grey">/</small>
+    <small class="has-text-primary"><%= Base64::decode64 props[:model].id %></small></p>
+  </div>
+</div>
+<footer class="card-footer">
+  <%= render 'yarii_editor/model_cards/standard_footer_buttons', model: props[:model], content_model_type: props[:content_model_type] %>
+</footer>

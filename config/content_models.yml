@@ -8,6 +8,11 @@ staging:
         label: Title
         placeholder: Groovy New Page
         class_names: foobar
+      -
+        field_type: cloudinary
+        field_name: cloudinary_id
+        label: Image
+        placeholder: "ID for image in Cloudinary"
     additional_fields:
       -
         field_type: text
