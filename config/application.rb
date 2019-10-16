@@ -11,6 +11,8 @@ module YariiExampleApp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    config.time_zone = "Pacific Time (US & Canada)"
+
     path = Gem.loaded_specs['yarii-editor'].full_gem_path
     config.middleware.use(
       Rack::Static,
