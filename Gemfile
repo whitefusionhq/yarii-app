@@ -28,12 +28,6 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-gem 'figaro'
-gem 'key_path', github: 'mattgrannary/keypath-ruby', branch: 'enumerable/fix-set-keypath'
-gem 'yarii-content-model', path: '/home/jared/apps/yarii-content-model'
-gem 'yarii-editor', path: '/home/jared/apps/yarii-editor'
-gem 'yarii-cloudinary', path: '/home/jared/apps/yarii-cloudinary'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -58,3 +52,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Custon Gems
+gem 'figaro'
+gem 'key_path', github: 'mattgrannary/keypath-ruby', branch: 'enumerable/fix-set-keypath'
+gem 'yarii-content-model', path: '/home/jared/apps/yarii-content-model'
+gem 'yarii-editor', path: '/home/jared/apps/yarii-editor'
+gem 'yarii-cloudinary', path: '/home/jared/apps/yarii-cloudinary'
