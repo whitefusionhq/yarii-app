@@ -197,7 +197,7 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     ruby_dep (1.5.0)
-    rubyzip (1.2.4)
+    rubyzip (1.3.0)
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -269,6 +269,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 6.0.0)
+  rubyzip (>= 1.3.0)
   sass-rails (~> 5)
   selenium-webdriver
   spring
@@ -284,6 +285,3 @@ DEPENDENCIES
 
 RUBY VERSION
    ruby 2.6.4p104
-
-BUNDLED WITH
-   1.17.3
