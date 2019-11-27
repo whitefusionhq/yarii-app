@@ -57,6 +57,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Custon Gems
 gem 'figaro'
 gem 'key_path', github: 'mattgrannary/keypath-ruby', branch: 'enumerable/fix-set-keypath'
-gem 'yarii-content-model', path: '/home/jared/apps/yarii-content-model'
-gem 'yarii-editor', path: '/home/jared/apps/yarii-editor'
-gem 'yarii-cloudinary', path: '/home/jared/apps/yarii-cloudinary'
+#gem 'yarii-content-model', path: '/home/jared/apps/yarii-content-model'
+gem 'yarii-content-model', github: 'whitefusionhq/yarii-content-model'
+gem 'yarii-editor', github: 'whitefusionhq/yarii-editor'
+gem 'yarii-cloudinary', github: 'whitefusionhq/yarii-cloudinary'
+gem 'sorcery'
