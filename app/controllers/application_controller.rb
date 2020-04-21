@@ -1,12 +1,9 @@
-require "cloudinary"
-require "#{Rails.root}/lib/setup_current_user"
-
 class ApplicationController < ActionController::Base
-end
+  before_action :require_login, except: [:not_authenticated]
 
-YariiEditor::ApplicationController.class_eval do
-  rescue_from YariiEditor::NotAuthorizedError do
-    flash[:alert] = "Please log in to use Yari"
-    redirect_to '/'
+  protected
+
+  def not_authenticated
+    redirect_to "/signin", alert: 'Please login first.'
   end
 end

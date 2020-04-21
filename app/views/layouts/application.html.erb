@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Yarii Example App</title>
+    <title>Yarii Editor</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= YariiEditor::ApplicationController.render :render_engine_stylesheet_tag, layout: nil %>
   </head>
 
   <body>
-    <h1>Yarii Example App</h1>
-    <%= yield %>
+    <section class="hero is-success">
+      <div class="hero-body">
+        <br/><br/>
+        <p class="has-text-centered">
+          <!-- Replace with your own logo -->
+          <%= image_tag 'yarii_editor/butterfly-small.png', alt: 'Yarii', style: 'width: 80px; transform: rotate(-10deg)' %>
+        </p>
+        <br/><br/>
+        <div class="container" style="max-width: 500px">
+          <h1 class="title has-text-centered">
+            <%= yield :title %>
+          </h1>
+
+          <% if flash[:error] %>
+            <article class="message is-warning">
+              <div class="message-header">
+                <p>Hmm…</p>
+                <button class="delete" aria-label="delete" onclick="document.querySelector('.message.is-warning').remove()"></button>
+              </div>
+              <div class="message-body">
+                <%= flash[:error] %>
+              </div>
+            </article>
+          <% end %>
+          
+          <%= yield %>
+        </div>
+        <br/><br/><br/><br/>
+      </div>
+    </section>
   </body>
 </html>

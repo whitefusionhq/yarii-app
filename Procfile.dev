@@ -1,0 +1,3 @@
+rails: ./bin/rails s -p 3000
+webpack: ./bin/webpack-dev-server
+yarii_editor_webpack: cd ../yarii-editor && bin/webpack -w

@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  resources :sessions
-  get 'login' => 'sessions#new', :as => :login
-  post 'logout' => 'sessions#destroy', :as => :logout
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :password_resets, only: [:create, :edit, :update]
+  resources :sites
 
-  mount YariiEditor::Engine => "/yarii"
-  mount YariiCloudinary::Engine => "/yarii_cloudinary"
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: "home#index"
+  get 'signin' => 'sessions#new', as: :login
+  delete 'logout' => 'sessions#destroy', as: :logout
+  delete 'logout' => 'sessions#destroy', as: :signout
+
+  mount YariiEditor::Engine => ''
+  mount YariiCloudinary::Engine => '/yarii_cloudinary'
 end

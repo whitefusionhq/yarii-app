@@ -1,5 +1,11 @@
 class Page < ApplicationContentModel
-  variables :layout, :date, :published, :title, :subtitle, :cloudinary_id, :alt_cloudinary_id, :cloudinary_ids, :permalink
+  variables :title,
+	    :subtitle,
+	    :layout,
+	    :published,
+	    :date,
+	    :permalink,
+	    :tags
 
   def generate_new_file_path
     slug = if title

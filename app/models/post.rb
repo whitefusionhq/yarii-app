@@ -1,13 +1,13 @@
 class Post < ApplicationContentModel
   folder '_posts'
 
-  variables :layout,
+  variables :title,
+            :subtitle,
+            :cloudinary_id,
+            :layout,
             :date,
             :published,
             :category,
-            :title,
-            :subtitle,
-            :cloudinary_id,
             :tags
 
   before_save :find_hashtags

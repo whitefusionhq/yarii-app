@@ -1,18 +1,30 @@
-<h1>Login</h1>
+<% content_for :title do %>Sign In<% end %>
 
-<div><%= flash[:alert] %></div>
-
-<%= form_with url: sessions_path, local: true, method: :post do |f| %>
+<%= form_with url: sessions_path, method: :post, local: true do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.label :email, class: 'label' %>
+    <div class="control">
+      <%= f.text_field :email, class: 'input' %>
+    </div>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
+    <%= f.label :password, class: 'label' %>
+    <div class="control">
+      <%= f.password_field :password, class: 'input' %>
+    </div>
   </div>
   <div class="actions">
-    <%= f.submit "Login" %>
+    <div class="control has-text-centered">
+      <%= f.submit "Login", class: 'button is-medium is-link' %>
+    </div>
+  </div>
+  <br/>
+  <div class="field">
+    <div class="control">
+      <%= f.label :remember, class: 'label checkbox' do %>
+        <%= f.check_box :remember %>
+        Keep me logged in
+      <% end %>
+    </div>
   </div>
 <% end %>
-
