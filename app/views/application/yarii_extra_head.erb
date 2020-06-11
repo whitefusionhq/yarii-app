@@ -1,3 +1,4 @@
 <%= javascript_pack_tag 'yariiextras', 'data-turbolinks-track': 'reload' %>
 <%= stylesheet_pack_tag 'yariiextras', 'data-turbolinks-track': 'reload' %>
-<!--< %= YariiCloudinary::ApplicationController.render :yarii_cloudinary_head, layout: nil % > -->
+<%- # Add Plugin Heads Includes Here: -%>
+<%= YariiCloudinary::ApplicationController.render :yarii_cloudinary_head, layout: nil %>

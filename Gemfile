@@ -54,11 +54,12 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Custon Gems
+# Custom Gems
 gem 'figaro'
 gem 'key_path', github: 'mattgrannary/keypath-ruby', branch: 'enumerable/fix-set-keypath'
-#gem 'yarii-content-model', path: '/home/jared/apps/yarii-content-model'
-gem 'yarii-content-model', github: 'whitefusionhq/yarii-content-model'
-gem 'yarii-editor', github: 'whitefusionhq/yarii-editor'
-gem 'yarii-cloudinary', github: 'whitefusionhq/yarii-cloudinary'
 gem 'sorcery'
+
+# Yarii
+gem 'yarii-content-model'
+gem 'yarii-editor'
+gem 'yarii-cloudinary'
